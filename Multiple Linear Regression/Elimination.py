@@ -12,7 +12,7 @@ def backElimination(x, y, sl):
     numVars = len(x[1,:])
     
     for i in range(0,numVars):
-        regressor_OLS = sm.OLS(endog = y, exog = x).fit()
+        regressor_OLS = sm.OLS(endog = y, exog = x).fit() 
         maxP = max(regressor_OLS.pvalues).astype(float)
         
         if maxP > sl:
