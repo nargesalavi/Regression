@@ -19,5 +19,6 @@ def backElimination(x, y, sl):
             for j in range(0, numVars - i):
                 if regressor_OLS.pvalues[j] == maxP:
                     x = np.delete(x, j, 1)
+                    
     return x
 
